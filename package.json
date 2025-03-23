@@ -1,22 +1,13 @@
 {
-  "name": "shadcn-landing-page-template",
-  "description": "Landing page template utilizing Shadcn, React, Typescript, and Tailwind CSS for rapid development and responsive design.",
+  "name": "venture-vibes",
+  "description": "A modern landing page for Venture Vibes, showcasing our mission to connect entrepreneurs with the right resources and community.",
   "author": {
-    "name": "Leopoldo Miranda",
-    "email": "leomirandadev@gmail.com",
-    "url": "https://github.com/leoMirandaa"
+    "name": "Carolina Martes",
+    "email": "",
+    "url": ""
   },
   "license": "MIT",
-  "keywords": [
-    "react",
-    "typescript",
-    "shadcn",
-    "shadcn/ui",
-    "tailwind",
-    "landing-page",
-    "template",
-    "responsive-design"
-  ],
+
   "private": true,
   "version": "1.1.0",
   "type": "module",

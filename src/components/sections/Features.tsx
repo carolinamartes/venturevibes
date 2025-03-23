@@ -82,32 +82,34 @@ export const Features = () => {
           </p>
         </div>
 
-        {/* Interactive Feature Selector */}
-        <div className="mb-12 relative">
-          <div className="flex overflow-x-auto py-4 snap-x scrollbar-hide space-x-4 md:justify-center">
-            {features.map((feature, idx) => (
-              <button
-                key={idx}
-                onClick={() => setActiveFeature(idx)}
-                className={`flex items-center px-6 py-3 rounded-full whitespace-nowrap transition-all duration-300 snap-start ${
-                  activeFeature === idx 
-                    ? `bg-gradient-to-r ${feature.color} text-white shadow-lg`
-                    : 'bg-white border border-gray-200 hover:border-gray-300 text-slate-800'
-                }`}
-              >
-                <i className={`fas ${feature.icon} mr-2 ${activeFeature === idx ? 'text-white' : 'text-slate-700'}`}></i>
-                <span className="font-medium">{feature.title}</span>
-              </button>
-            ))}
+        {/* Interactive Feature Selector - Fixed padding and overflow */}
+        <div className="mb-12 overflow-hidden">
+          <div className="flex overflow-x-auto py-4 snap-x scrollbar-hide md:justify-center">
+            <div className="flex gap-4 px-6 min-w-full">
+              {features.map((feature, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setActiveFeature(idx)}
+                  className={`flex items-center px-6 py-3 rounded-full whitespace-nowrap transition-all duration-300 snap-start flex-shrink-0 ${
+                    activeFeature === idx 
+                      ? `bg-gradient-to-r ${feature.color} text-white shadow-lg`
+                      : 'bg-white border border-gray-200 hover:border-gray-300 text-slate-800'
+                  }`}
+                >
+                  <i className={`fas ${feature.icon} mr-2 ${activeFeature === idx ? 'text-white' : 'text-slate-700'}`}></i>
+                  <span className="font-medium">{feature.title}</span>
+                </button>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Feature Showcase */}
-        <div className="overflow-hidden relative">
+        <div className="overflow-visible relative px-4">
           <div className="flex transition-all duration-500 ease-in-out" 
                style={{ transform: `translateX(-${activeFeature * 100}%)` }}>
             {features.map((feature, idx) => (
-              <div key={idx} className="w-full flex-shrink-0 px-4">
+              <div key={idx} className="w-full flex-shrink-0 p-8">
                 <div className="bg-gradient-to-br rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row h-64 md:h-96">
                   <div className={`w-full md:w-1/2 bg-gradient-to-br ${feature.color} p-8 flex items-center justify-center`}>
                     <div className="text-white text-center md:text-left">

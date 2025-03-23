@@ -1,4 +1,4 @@
-import logo from "@/assets/venture_vibes_logo.svg";
+import logo from "@/assets/logo.svg";
 
 export const Footer = () => {
   return (

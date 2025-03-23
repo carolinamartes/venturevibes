@@ -6,26 +6,26 @@ const stats = [
     title: "Startup Success Rate",
     value: "10%",
     description: "Only 10% of startups succeed long-term, with 90% failing within their first few years",
-    source: "Bureau of Labor Statistics",
-    sourceLink: "https://www.bls.gov/bdm/entrepreneurship/entrepreneurship.htm",
+    source: "Harvard Business Review",
+    sourceLink: "https://hbr.org/2021/05/why-start-ups-fail",
     icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>,
     color: "from-green-400 to-emerald-500"
   },
   {
     title: "Market Need Failure",
-    value: "42%",
-    description: "42% of startups fail because they build products with no market demand",
-    source: "CB Insights",
-    sourceLink: "https://www.cbinsights.com/research/startup-failure-post-mortem/",
+    value: "35%",
+    description: "35% of startups fail because they build products with no market demand",
+    source: "Stripe",
+    sourceLink: "https://stripe.com/gb/resources/more/startup-statistics-you-should-know",
     icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path><path d="M21 3v9h-9"></path></svg>,
     color: "from-red-400 to-rose-500"
   },
   {
-    title: "Tech Project Failure",
-    value: "19%",
-    description: "19% of tech projects completely fail, and 52% face challenges like cost overruns",
-    source: "Project Management Institute",
-    sourceLink: "https://www.pmi.org/learning/library/pulse-profession-navigating-complexity-11894",
+    title: "Need to Pivot",
+    value: "75%",
+    description: "75% of venture-backed startups undergo at least one major pivot during their journey.",
+    source: "GoingVC",
+    sourceLink: "https://www.goingvc.com/post/surviving-the-startup-gauntlet-lessons-in-failure-and-success",
     icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>,
     color: "from-blue-400 to-indigo-500"
   },
@@ -79,4 +79,15 @@ export const MarketReality = () => {
       </div>
     </section>
   );
+};
+
+export const marketRealityData = {
+  statistics: [
+    {
+      title: "75% of Successful Startups Pivot",
+      description: "Harvard Business School found that 3 in 4 venture-backed startups make at least one major pivot",
+    },
+  ],
+  headline: "Adapt or Fade: Why Flexibility Defines Startup Success",
+  subheadline: "In fast-moving tech markets, the ability to pivot is more valuable than perfect planning",
 }; 

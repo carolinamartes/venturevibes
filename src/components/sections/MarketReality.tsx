@@ -8,7 +8,11 @@ const stats = [
     description: "Only 10% of startups succeed long-term, with 90% failing within their first few years",
     source: "Harvard Business Review",
     sourceLink: "https://hbr.org/2021/05/why-start-ups-fail",
-    icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>,
+    icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 20V10"></path>
+      <path d="M18 20V4"></path>
+      <path d="M6 20v-4"></path>
+    </svg>,
     color: "from-green-400 to-emerald-500"
   },
   {
@@ -17,7 +21,11 @@ const stats = [
     description: "35% of startups fail because they build products with no market demand",
     source: "Stripe",
     sourceLink: "https://stripe.com/gb/resources/more/startup-statistics-you-should-know",
-    icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"></path><path d="M21 3v9h-9"></path></svg>,
+    icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="8" x2="12" y2="16"></line>
+      <line x1="8" y1="12" x2="16" y2="12"></line>
+    </svg>,
     color: "from-red-400 to-rose-500"
   },
   {
@@ -33,7 +41,7 @@ const stats = [
 
 export const MarketReality = () => {
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+    <section className="py-20 px-6 bg-gradient-to-b from-purple-50/20 via-slate-50 to-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-5 pointer-events-none">
         <img src={spaceBg} alt="" className="w-full h-full object-cover" />
       </div>
@@ -72,7 +80,7 @@ export const MarketReality = () => {
 
         <div className="mt-12 text-center">
           <p className="text-lg text-slate-700 max-w-2xl mx-auto">
-            Venture Vibes helps you avoid these common pitfalls by providing AI-powered guidance, 
+            VentureVibes helps you avoid these common pitfalls by providing AI-powered guidance, 
             structured development paths, and proven strategies for successful product launches.
           </p>
         </div>
@@ -82,11 +90,45 @@ export const MarketReality = () => {
 };
 
 export const marketRealityData = {
-  statistics: [
+  stats: [
     {
-      title: "75% of Successful Startups Pivot",
-      description: "Harvard Business School found that 3 in 4 venture-backed startups make at least one major pivot",
+      icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+      </svg>,
+      title: "Strategic Agility",
+      value: "75%",
+      description: "Our AI helps you make smart pivots and adaptations, following the path of successful venture-backed startups",
+      source: "Harvard Business School",
+      sourceLink: "https://hbr.org/2021/05/why-start-ups-fail",
+      color: "from-blue-400 to-indigo-500"
     },
+    {
+      icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+      </svg>,
+      title: "Market Opportunity",
+      value: "35%",
+      description: "Our AI-powered market research helps you identify and capture untapped market potential",
+      source: "Stripe",
+      sourceLink: "https://stripe.com/gb/resources/more/startup-statistics-you-should-know",
+      color: "from-green-400 to-emerald-500"
+    },
+    {
+      icon: <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M12 20V10"></path>
+        <path d="M18 20V4"></path>
+        <path d="M6 20v-4"></path>
+      </svg>,
+      title: "Growth Acceleration",
+      value: "10x",
+      description: "Our proven framework accelerates your path to product-market fit and sustainable growth",
+      source: "GoingVC",
+      sourceLink: "https://www.goingvc.com/post/surviving-the-startup-gauntlet-lessons-in-failure-and-success",
+      color: "from-purple-400 to-purple-600"
+    }
   ],
   headline: "Adapt or Fade: Why Flexibility Defines Startup Success",
   subheadline: "In fast-moving tech markets, the ability to pivot is more valuable than perfect planning",

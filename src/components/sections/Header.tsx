@@ -15,10 +15,10 @@ export const Header = () => {
         <div className="flex items-center space-x-2">
           <img
             src={logo}
-            alt="Venture Vibes Logo"
+            alt="VentureVibes Logo"
             className="h-8 w-auto"
           />
-          <span className="text-[#2563EB] text-xl font-bold"> Venture Vibes </span>
+          <span className="text-[#2563EB] text-xl font-bold"> VentureVibes </span>
         </div>
 
         <Button onClick={handleClick} className="!rounded-button bg-gradient-to-r from-[rgb(37,99,235)] to-indigo-600 hover:from-[rgb(37,99,235)] hover:to-indigo-500 text-white border-0 shadow-lg hover:shadow-xl transition-all duration-300">Sign Up</Button>

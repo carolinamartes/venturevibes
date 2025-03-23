@@ -9,17 +9,17 @@ export const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <img 
                 src={logo} 
-                alt="Venture Vibes Logo" 
+                alt="VentureVibes Logo" 
                 className="h-8 w-auto"
               />
-              <span className="text-xl font-bold text-white font-['Inter']">Venture Vibes</span>
+              <span className="text-xl font-bold text-white font-['Inter']">VentureVibes</span>
             </div>
             <p className="text-slate-300">Empowering the next generation of creators with AI-powered development tools.</p>
           </div>
 
         </div>
         <div className="mt-12 pt-8 border-t border-slate-800 text-center text-slate-300">
-          <p>&copy; 2025 Venture Vibes. All rights reserved.</p>
+          <p>&copy; 2025 VentureVibes. All rights reserved.</p>
         </div>
       </div>
     </footer>

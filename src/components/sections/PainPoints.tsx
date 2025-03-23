@@ -62,7 +62,7 @@ export const PainPoints = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-20 px-6 bg-gradient-to-b from-white via-slate-50 to-purple-50/20">
       <div className="max-w-7xl mx-auto overflow-visible">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4 text-slate-900">What We Offer</h2>

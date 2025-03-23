@@ -73,7 +73,7 @@ export const Features = () => {
   const [activeFeature, setActiveFeature] = useState(0);
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-20 px-6 bg-gradient-to-b from-white via-slate-50 to-indigo-50/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4 text-slate-900">Your AI-Powered Co-Founder</h2>

@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { PainPoints } from "@/components/sections/PainPoints";
 import { Features } from "@/components/sections/Features";
 import { MarketReality } from "@/components/sections/MarketReality";
+import { About } from "@/components/sections/About";
 import { CTA } from "@/components/sections/CTA";
 import { Footer } from "@/components/sections/Footer";
 import "./App.css";
@@ -13,8 +14,11 @@ const App: React.FC = () => {
       <Header />
       <Hero />
       <Features />
+ 
       <PainPoints />
+  
       <MarketReality />
+      <About />
       <CTA />
       <Footer />
     </div>

@@ -1,17 +1,14 @@
-
 import { Button } from "@/components/ui/button";
-
 import { useForm, ValidationError } from '@formspree/react';
 
 export function CTA() {
   return (
     <section className="py-16 px-4 md:px-6 lg:px-8" id="cta">
       <div className="container mx-auto text-center">
-        <> <h2 className="text-3xl font-bold mb-6">
+        <h2 className="text-3xl font-bold mb-6">
           Join Our Waitlist
         </h2>
-          <CTAForm center={true} />
-        </>
+        <CTAForm center={true} />
       </div>
     </section>
   );
@@ -25,9 +22,8 @@ export const CTAForm: React.FC<CTAFormProps> = ({ center = false }) => {
   const [state, handleSubmit] = useForm("xovedzkv");
   return (
     <>
-
       {!state.succeeded ? (
-        <form onSubmit={handleSubmit} className={center ? "max-w-md mx-auto" : "max-w-md "}>
+        <form onSubmit={handleSubmit} method="POST" className={center ? "max-w-md mx-auto" : "max-w-md"}>
           <div className="flex gap-2">
             <label htmlFor="email">
               Email Address
@@ -37,7 +33,6 @@ export const CTAForm: React.FC<CTAFormProps> = ({ center = false }) => {
               type="email"
               name="email"
             />
-
             <Button type="submit" disabled={state.submitting}>
               Subscribe
             </Button>
@@ -54,7 +49,5 @@ export const CTAForm: React.FC<CTAFormProps> = ({ center = false }) => {
         </p>
       )}
     </>
-
   );
 }
-

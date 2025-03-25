@@ -20,43 +20,43 @@ export const About = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-gradient-to-b from-indigo-50/30 to-white">
+    <section className="py-24 px-6 bg-gradient-to-b from-indigo-50/30 to-white">
       <div className="max-w-7xl mx-auto">
         {/* Mission Statement */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4 text-slate-900">Who We Are</h2>
-          <p className="text-lg text-slate-700 max-w-2xl mx-auto">
+          <span className="inline-block px-3 py-1 text-sm font-medium text-indigo-600 bg-indigo-100 rounded-full mb-4">About Us</span>
+          <h2 className="text-4xl font-extrabold mb-6 text-slate-900 tracking-tight">Who We Are</h2>
+          <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Hey there! 👋 We're a team of software engineers and startup veterans who've been where you are. We've taken the complex world of tech and made it accessible to everyone.
           </p>
         </div>
 
         {/* Values */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {values.map((value, index) => (
-            <Card key={index} className="p-6 bg-white shadow-md hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600">
-                  {value.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-slate-900">{value.title}</h3>
+            <Card key={index} className="p-8 bg-white shadow-soft hover:shadow-xl transition-all duration-300 rounded-xl modern-card border-0">
+              <div className="w-14 h-14 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 mb-6">
+                {value.icon}
               </div>
-              <p className="text-slate-600">{value.description}</p>
+              <h3 className="text-xl font-bold mb-4 text-slate-900">{value.title}</h3>
+              <p className="text-slate-600 leading-relaxed">{value.description}</p>
             </Card>
           ))}
         </div>
 
         {/* Story Section */}
-        <div className="mt-20 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl p-8 md:p-12 text-white">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
-            <p className="text-lg mb-6 text-white/90">
-              The AI revolution has made coding more accessible than ever. But we noticed something missing: support for all the other crucial aspects of building successful products.
+        <div className="mt-20 gradient-bg-animation rounded-2xl p-8 md:p-12 text-white shadow-soft overflow-hidden relative">
+          <div className="absolute inset-0 opacity-20 pointer-events-none">
+            <div className="absolute -right-20 -top-20 w-64 h-64 rounded-full bg-white/20"></div>
+            <div className="absolute -left-20 -bottom-20 w-64 h-64 rounded-full bg-white/10"></div>
+          </div>
+          <div className="max-w-3xl mx-auto text-center relative z-10">
+            <h2 className="text-4xl font-bold mb-8">Our Mission</h2>
+            <p className="text-xl mb-6 text-white/95 leading-relaxed">
+              AI has made coding easier, but building successful products requires more than just code.
             </p>
-            <p className="text-lg mb-6 text-white/90">
-              That's why we created a platform that goes beyond just code. We combine AI capabilities with strategic guidance to help you navigate every step of your product journey.
-            </p>
-            <p className="text-lg text-white/90">
-              Our mission is simple: empower creators to build remarkable products, regardless of their technical background. Because great ideas deserve the chance to thrive.
+            <p className="text-xl text-white/95 leading-relaxed">
+              We combine AI with strategic guidance to help creators build remarkable products, regardless of technical background. Because great ideas deserve to thrive.
             </p>
           </div>
         </div>

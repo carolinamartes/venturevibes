@@ -55,17 +55,6 @@ const features = [
       "Achievement system and rewards",
       "Performance analytics and insights"
     ]
-  },
-  {
-    icon: 'fa-users-gear',
-    title: 'Community Integration',
-    description: 'Connect with like-minded creators and share experiences',
-    color: "from-indigo-400 to-purple-500",
-    details: [
-      "Dedicated community spaces",
-      "Knowledge sharing forums",
-      "Collaboration opportunities"
-    ]
   }
 ];
 

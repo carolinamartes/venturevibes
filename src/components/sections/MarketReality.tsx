@@ -43,7 +43,7 @@ export const MarketReality = () => {
   return (
     <section className="py-24 px-6 bg-gradient-to-b from-purple-50/20 via-slate-50 to-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <img src={spaceBg} alt="" className="w-full h-full object-cover" />
+        <img src={spaceBg} alt="Abstract tech background pattern" className="w-full h-full object-cover" />
       </div>
       <div className="max-w-7xl mx-auto relative">
         <div className="text-center mb-16">

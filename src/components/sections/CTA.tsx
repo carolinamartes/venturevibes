@@ -1,6 +1,6 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useForm, ValidationError } from "@formspree/react";
 
 export function CTA() {
   return (
@@ -50,42 +50,32 @@ interface CTAFormProps {
 }
 
 export const CTAForm: React.FC<CTAFormProps> = ({ center = false }) => {
-  const [email, setEmail] = useState("");
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsLoading(true);
-    
-    // Simulating API call
-    setTimeout(() => {
-      setIsLoading(false);
-      setIsSubmitted(true);
-    }, 1500);
-  };
-
+  const [state, handleSubmit] = useForm("xovedzkv");
+  
   return (
     <div>
-      {!isSubmitted ? (
+      {!state.succeeded ? (
         <form onSubmit={handleSubmit} className={center ? "max-w-md mx-auto" : "max-w-md"}>
           <div className="flex flex-col sm:flex-row gap-3">
             <Input
               type="email"
               placeholder="Enter your email"
-              id="email-input"
+              id="email"
               name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
               required
               className="rounded-lg border-slate-200 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 shadow-sm transition-standard"
             />
+            <ValidationError 
+              prefix="Email" 
+              field="email"
+              errors={state.errors}
+            />
             <Button 
               type="submit" 
-              disabled={isLoading}
-              className={`bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-medium py-2 px-6 rounded-lg shadow-md hover:shadow transition-standard hover-lift ${isLoading ? 'opacity-70' : ''}`}
+              disabled={state.submitting}
+              className="bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-medium py-2 px-6 rounded-lg shadow-md hover:shadow transition-standard hover-lift"
             >
-              {isLoading ? (
+              {state.submitting ? (
                 <div className="flex items-center justify-center">
                   <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
@@ -100,12 +90,13 @@ export const CTAForm: React.FC<CTAFormProps> = ({ center = false }) => {
           </div>
         </form>
       ) : (
-        <div className="bg-green-50 text-green-700 p-6 rounded-lg border border-green-100 shadow-sm text-center animate-scaleIn">
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 mx-auto mb-4 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-          <p className="font-semibold text-lg mb-1">Thanks for subscribing!</p>
-          <p>We'll be in touch soon with exclusive updates.</p>
+        <div className="bg-green-50 text-green-700 p-3 rounded-lg border border-green-100 shadow-sm text-center animate-scaleIn">
+          <div className="flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p className="text-sm font-medium">Thanks for subscribing! We'll be in touch soon.</p>
+          </div>
         </div>
       )}
     </div>

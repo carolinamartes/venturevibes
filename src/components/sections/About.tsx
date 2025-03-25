@@ -20,19 +20,22 @@ export const About = () => {
   ];
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-indigo-50/30 to-white">
+    <section className="py-24 px-6 bg-gradient-to-b from-indigo-50/30 to-white" id="about">
       <div className="max-w-7xl mx-auto">
         {/* Mission Statement */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-3 py-1 text-sm font-medium text-indigo-600 bg-indigo-100 rounded-full mb-4">About Us</span>
-          <h2 className="text-4xl font-extrabold mb-6 text-slate-900 tracking-tight">Who We Are</h2>
+        <article className="text-center mb-16">
+          <header>
+            <span className="inline-block px-3 py-1 text-sm font-medium text-indigo-600 bg-indigo-100 rounded-full mb-4">About Us</span>
+            <h2 className="text-4xl font-extrabold mb-6 text-slate-900 tracking-tight">Who We Are</h2>
+          </header>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
             Hey there! 👋 We're a team of software engineers and startup veterans who've been where you are. We've taken the complex world of tech and made it accessible to everyone.
           </p>
-        </div>
+        </article>
 
         {/* Values */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <section aria-labelledby="our-values" className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+          <h3 id="our-values" className="sr-only">Our Values</h3>
           {values.map((value, index) => (
             <Card key={index} className="p-8 bg-white shadow-soft hover:shadow-xl transition-all duration-300 rounded-xl modern-card border-0">
               <div className="w-14 h-14 rounded-xl bg-indigo-100 flex items-center justify-center text-indigo-600 mb-6">
@@ -42,10 +45,10 @@ export const About = () => {
               <p className="text-slate-600 leading-relaxed">{value.description}</p>
             </Card>
           ))}
-        </div>
+        </section>
 
         {/* Story Section */}
-        <div className="mt-20 gradient-bg-animation rounded-2xl p-8 md:p-12 text-white shadow-soft overflow-hidden relative">
+        <aside className="mt-20 gradient-bg-animation rounded-2xl p-8 md:p-12 text-white shadow-soft overflow-hidden relative">
           <div className="absolute inset-0 opacity-20 pointer-events-none">
             <div className="absolute -right-20 -top-20 w-64 h-64 rounded-full bg-white/20"></div>
             <div className="absolute -left-20 -bottom-20 w-64 h-64 rounded-full bg-white/10"></div>
@@ -59,7 +62,7 @@ export const About = () => {
               We combine AI with strategic guidance to help creators build remarkable products, regardless of technical background. Because great ideas deserve to thrive.
             </p>
           </div>
-        </div>
+        </aside>
       </div>
     </section>
   );

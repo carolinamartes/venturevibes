@@ -51,7 +51,7 @@ export const Features = () => {
   const [activeFeature, setActiveFeature] = useState(0);
 
   return (
-    <section className="py-24 px-6 bg-gradient-to-b from-white via-slate-50 to-indigo-50/30">
+    <section className="py-24 px-6 bg-gradient-to-b from-white via-slate-50 to-indigo-50/30" id="features">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <span className="inline-block px-3 py-1 text-sm font-medium text-indigo-600 bg-indigo-100 rounded-full mb-4">Features</span>

@@ -14,12 +14,17 @@ export const Footer = () => {
               />
               <span className="text-xl font-bold text-white font-['Inter']">VentureVibes</span>
             </div>
-            <p className="text-slate-300">Empowering the next generation of creators with AI-powered development tools.</p>
+            <p className="text-slate-300">Guiding creators from idea to launch with AI-powered tools and no-code solutions.</p>
           </div>
 
         </div>
         <div className="mt-12 pt-8 border-t border-slate-800 text-center text-slate-300">
           <p>&copy; 2025 VentureVibes. All rights reserved.</p>
+          
+          {/* Pre-market disclaimer */}
+          <div className="text-xs text-slate-400 text-center mt-4">
+            VentureVibes is currently in development. All features and information showcased represent our vision for the final product and may be subject to change before launch.
+          </div>
         </div>
       </div>
     </footer>

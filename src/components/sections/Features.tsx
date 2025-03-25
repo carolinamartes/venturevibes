@@ -20,7 +20,7 @@ const features = [
     details: [
       "Create comprehensive development blueprints",
       "Track measurable progress with defined milestones",
-      "Stay on course with automated progress monitoring"
+      "Access checklists and resources for every step"
     ]
   },
   {
@@ -36,13 +36,13 @@ const features = [
   },
   {
     icon: 'fa-magnifying-glass-chart',
-    title: 'Bespoke AI Resources',
+    title: 'Bespoke Resources',
     description: 'Discover the perfect tools and resources to supercharge every phase of your project.',
     color: "from-green-400 to-teal-500",
     details: [
       "Get personalized recommendations for smart AI-powered tools",
-      "Compare options in-depth to make informed decisions",
-      "Integrate seamlessly with your existing workflow"
+      "Discover relevant tutorials, templates, no-code solutions, and more",
+      "Community-driven resources for every project need"
     ]
   }
 ];

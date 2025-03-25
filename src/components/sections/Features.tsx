@@ -29,7 +29,7 @@ const features = [
     description: 'Leverage a curated library of prompts tailored for every stage of your development journey.',
     color: "from-pink-400 to-red-500",
     details: [
-      "Craft high-impact prompts with expert guidance",
+      "Browse a diverse range of prompts for every need",
       "Receive context-aware suggestions for better results",
       "Access community-driven templates for diverse needs"
     ]
@@ -40,9 +40,9 @@ const features = [
     description: 'Discover the perfect tools and resources to supercharge every phase of your project.',
     color: "from-green-400 to-teal-500",
     details: [
-      "Get recommendations for smart AI-powered tools",
+      "Get personalized recommendations for smart AI-powered tools",
       "Compare options in-depth to make informed decisions",
-      "Integrate tools with step-by-step guides and tutorials"
+      "Integrate seamlessly with your existing workflow"
     ]
   }
 ];
